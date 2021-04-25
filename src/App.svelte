@@ -13,14 +13,22 @@
 	export let url = "";
 </script>
 
-<Router url="{url}">
-	<Navbar bind:sidebar={open}/>
-	<Sidebar bind:open />
-	<div>
-<!--		<Route path="blog/:id" component="{BlogPost}" />-->
-<!--		<Route path="blog" component="{Blog}" />-->
-		<Route path="about" component="{About}" />
-		<Route path="/"><Home name="Henry" /></Route>
-		<Route path="contact" component="{Contact}" />
-	</div>
-</Router>
+<div id="scrollme">
+	<Router url="{url}">
+		<Navbar bind:sidebar={open}/>
+		<Sidebar bind:open />
+		<div>
+	<!--		<Route path="blog/:id" component="{BlogPost}" />-->
+	<!--		<Route path="blog" component="{Blog}" />-->
+			<Route path="about" component="{About}" />
+			<Route path="/"><Home /></Route>
+			<Route path="contact" component="{Contact}" />
+		</div>
+	</Router>
+</div>
+
+<style>
+	#scrollme {
+		min-width: 240px;
+	}
+</style>

@@ -20,11 +20,18 @@
 
 <style>
 	aside {
-		left: -90%;
+		left: -100%;
 		position: absolute;
 		height: 100%;
-		width: 90%;
-		transition: left 0.3s ease-in-out
+		width: 50%;
+		transition: left 0.3s ease-in-out;
+		background-color: white;
+	}
+
+	@media only screen and (max-width: 768px) {
+		aside {
+			width: 90%;
+		}
 	}
 	
 	.open {
@@ -32,7 +39,16 @@
 	}
 
 	li {
+		margin-top: 15px;
 		padding: 15px;
+	}
+
+	nav {
+		display: block;
+	}
+
+	nav ul {
+		text-align: center;
 	}
 
 </style>
